@@ -1,4 +1,4 @@
-﻿namespace TerraMart.Domain.Lands;
+﻿namespace TerraMart.Domain.Products;
 
 /// <summary>
 /// Represents a standard sellable lot-size of land

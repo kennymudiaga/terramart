@@ -1,17 +1,16 @@
-﻿namespace TerraMart.Domain.Lands;
+﻿namespace TerraMart.Domain.Products;
 
-public class Plot
+public class ProjectPlot : Plot
 {
+    public string Name { get; set; }
     /// <summary>
     /// Gets or sets a flag indicating if a client can buy half of this plot
     /// </summary>
-    public bool AllowHalf { get; set; }
-    /// <summary>
-    /// Size in square meters
-    /// </summary>
-    public int Size { get; set; }
+    public bool AllowHalf { get; set; }    
     /// <summary>
     /// The total available units of this plot size
     /// </summary>
     public int? TotalUnits { get; set; }
+    public decimal Price { get; set; }
+    public bool IsSubscribed { get; set; }
 }
