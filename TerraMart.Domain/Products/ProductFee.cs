@@ -2,7 +2,9 @@
 
 public class ProductFee
 {
-    public string? Id { get; set; }
-    public string? Title { get; set; }
+    public string FeeId { get; set; }
+    public string Title { get; set; }
+    public decimal? Amount { get; set; }
+    public decimal? Rate { get; set; }
     public ProductType ProductType { get; set; }
 }

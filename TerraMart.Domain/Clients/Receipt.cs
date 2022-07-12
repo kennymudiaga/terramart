@@ -15,4 +15,5 @@ public class Receipt
     public DateTime Date { get; set; }
     public string? ConfirmedBy { get; set; }
     public DateTime? DateConfirmed { get; set; }
+    public List<ReceiptItem> Items { get; set; }
 }
