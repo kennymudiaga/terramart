@@ -6,7 +6,7 @@ namespace TerraMart.Domain.Validators
 {
     public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
         where TRequest : IRequest<TResponse>
-        where TResponse : Result
+        where TResponse : Result, new()
     {
         private readonly IEnumerable<IValidator<TRequest>> validators;
 
@@ -25,7 +25,7 @@ namespace TerraMart.Domain.Validators
             }
             if (failures.Count > 0)
             {
-                return (new ErrorResult(failures) as TResponse)!;
+                return new() { Errors = failures.Select(x => x.ErrorMessage).ToList() };
             }
             return await next();
         }

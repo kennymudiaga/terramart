@@ -15,11 +15,12 @@ public class Result
         Errors = errors;
     }
 
-    public bool Success { get; protected set; }
-    public List<string> Errors { get; protected set; }
+    public bool Success { get; set; }
+    public List<string> Errors { get; set; }
 
     public static Result Error(string error) => new(false, new() { error });
     public static Result Error(IEnumerable<string> errors) => new(false, errors.ToList());
+    
     public static Result Ok() => new() { Success = true };
 }
 
