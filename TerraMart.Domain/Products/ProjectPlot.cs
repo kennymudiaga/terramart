@@ -2,7 +2,7 @@
 
 public class ProjectPlot : Plot
 {
-    public string Name { get; set; }
+    public string? Name { get; set; }
     /// <summary>
     /// Gets or sets a flag indicating if a client can buy half of this plot
     /// </summary>
